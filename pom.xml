@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>tn.esprit.spring.services</groupId>
 	<artifactId>timesheet-devops</artifactId>
-	<version>1.0</version>
+	<version>1.0-RELEASE</version>
 	<name>timesheet-devops</name>
 	<description>tp-spring-jsf-crud</description>
 	<properties>
@@ -25,11 +25,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency> 
-
-
-
-
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -57,7 +59,7 @@
 		<repository>
 			<id>deploymentRepo</id>
 			<name>Nexus Repository</name>
-			<url>http://192.168.108.222:8081/repository/maven-releases/</url>
+			<url>http://localhost:8081/repository/maven-releases/</url>
 		</repository>
 	</distributionManagement>
 
