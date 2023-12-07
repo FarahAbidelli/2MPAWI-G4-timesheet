@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import tn.esprit.spring.entities.User;
 import tn.esprit.spring.services.IUserService;
+import tn.esprit.spring.services.UserServiceImpl;
 
 // userRestControl
 @RestController // = @Controller + @ResponseBody 
@@ -23,8 +24,8 @@ import tn.esprit.spring.services.IUserService;
 // request 
 public class UserRestControl {
 
-	@Autowired 
-	IUserService userService; 
+
+	IUserService userService;
 
 	
 	// URL : http://localhost:????/????/retrieve-all-users
@@ -37,6 +38,7 @@ public class UserRestControl {
 	// http://localhost:????/timesheet-devops/retrieve-user/{user-id}
 	@GetMapping("/retrieve-user/{user-id}")
 	public User retrieveUser(@PathVariable("user-id") String userId) {
+
 		return userService.retrieveUser(userId);
 	}
 	
@@ -54,6 +56,7 @@ public class UserRestControl {
 	// http://localhost:????/timesheet-devops/remove-user/{user-id}
 	@DeleteMapping("/remove-user/{user-id}") 
 	public void removeUser(@PathVariable("user-id") String userId) { 
+
 		userService.deleteUser(userId);
 	} 
 
