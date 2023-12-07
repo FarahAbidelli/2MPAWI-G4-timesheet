@@ -28,7 +28,7 @@ public class EmployeRestControl {
         Employe employe= employeService.addEmploye(e);
         return employe;
     }
-    @DeleteMapping("/remove-user/{user-id}")
+    @DeleteMapping("/remove-employee/{user-id}")
     public void removeEmploye(@PathVariable("employr-id") String empolyeId) {
 
         employeService.deleteEmploye(empolyeId);
